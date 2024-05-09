@@ -1,0 +1,143 @@
+/* Importa las fuentes 'Kurale' y 'Staatliches' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Staatliches&display=swap');
+
+/* Establece el box-sizing en border-box para todos los elementos y sus pseudoelementos */
+*, *:before, *::after {
+    box-sizing: border-box;
+}
+
+/* Estilos base para el elemento root (html) y el cuerpo (body) */
+html, body {
+    font-size: 16px; /* Tamaño base de la fuente */
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilos adicionales para html y body */
+html, body {
+    display: block; /* Asegura que html y body se comporten como bloques */
+}
+
+/* Estilos principales para el cuerpo */
+body {
+    line-height: 1.317101995; /* Altura de línea */
+    scroll-behavior: smooth; /* Comportamiento de desplazamiento suave */
+    font-family: sans-serif; /* Familia de fuentes predeterminada */
+    background-color: #ffffff; /* Color de fondo */
+}
+
+/* Elimina el resaltado de enfoque en los botones */
+button:focus {
+    outline: 0;
+}
+
+/* Estilos para elementos multimedia para que se ajusten dentro de su contenedor */
+img, embed, svg, audio, canvas, iframe, video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Estilos para la línea horizontal */
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0;
+}
+
+/* Estilos para el cuerpo principal */
+body {
+    color: #5c7470; /* Color de texto principal */
+    width: 100%; /* Ancho completo */
+    height: 100vh; /* Altura de la ventana gráfica */
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Dirección de flexión */
+    align-items: center; /* Alinea los elementos al centro horizontal */
+    padding: 32px 0; /* Relleno superior e inferior */
+}
+
+/* Estilos para el título h1 */
+h1 {
+    font-size: 4rem; /* Tamaño del título */
+    margin-top: 0; /* Sin margen superior */
+    margin-bottom: 80px; /* Margen inferior */
+    color: black; /* Color del texto */
+    font-family: "Staatliches", sans-serif; /* Fuente personalizada */
+    font-weight: 400; /* Peso de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+}
+
+/* Estilos para el span dentro de h1 */
+h1 span {
+    color: black; /* Color del texto */
+    font-family: "Staatliches", sans-serif; /* Fuente personalizada */
+    font-weight: 400; /* Peso de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+}
+
+/* Estilos para los párrafos */
+p {
+    margin: 0; /* Sin márgenes */
+    font-family: "Staatliches", sans-serif; /* Fuente personalizada */
+    font-weight: 400; /* Peso de la fuente */
+    font-style: normal; /* Estilo de la fuente */
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.cards-grid {
+    display: flex; /* Flexbox para los elementos internos */
+    grid-gap: 80px; /* Espacio entre tarjetas */
+    padding-bottom: 60px; /* Relleno inferior */
+}
+
+/* Estilos para las tarjetas de volteo */
+.flip-card {
+    width: 320px; /* Ancho de la tarjeta */
+    height: 504px; /* Altura de la tarjeta */
+    perspective: 2000px; /* Perspectiva para el efecto de volteo */
+}
+
+/* Estilos para el contenedor interno de las tarjetas de volteo */
+.flip-card-inner {
+    position: relative; /* Posición relativa para los hijos absolutos */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    border-radius: 28px; /* Radio de borde */
+    transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13); /* Transición */
+    transform-style: preserve-3d; /* Estilo de transformación */
+}
+
+/* Estilos para el frente y el reverso de las tarjetas */
+.flip-card-front, .flip-card-back {
+    position: absolute; /* Posición absoluta para superponer */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    border-radius: 28px; /* Radio de borde */
+    backface-visibility: hidden; /* Oculta el reverso */
+}
+
+/* Estilos para el frente de las tarjetas */
+.flip-card-front {
+    background-position: center; /* Posición del fondo */
+    background-repeat: no-repeat; /* No repetir el fondo */
+    background-size: cover; /* Cubrir el fondo */
+}
+
+/* Estilos para el reverso de las tarjetas */
+.flip-card-back {
+    font-size: 1.25rem; /* Tamaño de fuente */
+    text-align: center; /* Alineación de texto */
+    display: grid; /* Grid layout */
+    place-items: center; /* Centra los elementos en el grid */
+    padding: 32px; /* Relleno */
+    background-color: #B1CFC8; /* Color de fondo */
+    transform: rotateY(180deg); /* Gira 180 grados para ocultar el reverso */
+}
+
+/* Efecto de volteo al pasar el mouse sobre la tarjeta */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg); /* Voltea la tarjeta */
+}

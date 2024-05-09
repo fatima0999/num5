@@ -1,0 +1,86 @@
+<!--Declara el tipo de documento como HTML5.-->
+<!DOCTYPE html>
+<!--Elemento raíz del documento HTML-->
+<html lang="en">
+<!--Contiene meta información sobre el documento-->
+<head>
+	<!--Establece la codificación de caracteres en UTF-8.-->
+	<meta charset="UTF-8">
+	<!--Optimiza el puerto de visualización para varios tamaños de pantalla.-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Define el título de la página web que se muestra en la pestaña del navegador.-->
+	<title>Document</title>
+	<!--Vincula una hoja de estilo externa llamada style.css para el estilo.-->
+	<link rel="stylesheet" href="style.css">
+</head>
+<!--Contiene el contenido visible de la página web.-->
+<body>
+	<!--Establece un color de fondo para toda la página web (lila claro).-->
+	<body style="background-color: rgb(213, 100, 179);">
+		<!--Elemento de encabezado para el título de la página web-->
+		<h1>
+			<!--El texto del encabezado con un elemento span para darle un estilo diferente a la palabra "Voltear tarjas".-->
+			Efecto: <span>Voltear tarjas</span>
+		</h1>
+		<!--Un elemento contenedor con la clase "cards-grid" para contener las tarjetas volteables.-->
+		<div class="cards-grid">
+			<!--Cada elemento .flip-card representa una sola tarjeta volteable.
+Dentro de cada .flip-card-->
+			<div class="flip-card">
+				<!--Un contenedor interno para sostener los lados frontal y posterior de la tarjeta.-->
+				<div class="flip-card-inner">
+					<!--El lado frontal de la tarjeta, utilizando una imagen de fondo de un archivo llamado imagenes/7db4d7d8-c29a-4ded-84b5-a52ee6ab3fa8.jpg.-->
+					<div class="flip-card-front" style="background-image: url('imagenes/7db4d7d8-c29a-4ded-84b5-a52ee6ab3fa8.jpg');">
+					</div>
+					<!--El lado posterior de la tarjeta, que contiene texto.Notas Adicionales:-->
+					<div class="flip-card-back">
+						Habré de levantar la vasta vida
+						que aún ahora es tu espejo:
+						cada mañana habré de reconstruirla.
+						Desde que te alejaste,
+						cuántos lugares se han tornado vanos
+						y sin sentido, iguales
+						a luces en el día
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<!-- Contenedor de la primera tarjeta flip-card -->
+				<div class="flip-card-inner">
+					<!-- Contenedor interno para la animación de volteo -->
+					<div class="flip-card-front" style="background-image: url('imagenes/70c0cb78-05e3-4d5f-966f-ef00fb084740.jpg');">
+						<!-- Frente de la tarjeta con imagen de fondo -->
+					</div>
+					<div class="flip-card-back">
+						<!-- Reverso de la tarjeta -->
+						A fugitivas sombras doy abrazos,
+						en los sueños se cansa el alma mía;
+						paso luchando a solas noche y día,
+						con un trasgo que traigo entre mis brazos.
+						<!-- Texto poético -->
+					</div>
+				</div>
+			</div>
+			<!-- Fin de la primera tarjeta flip-card -->
+			
+			<div class="flip-card">
+				<!-- Contenedor de la segunda tarjeta flip-card -->
+				<div class="flip-card-inner">
+					<!-- Contenedor interno para la animación de volteo -->
+					<div class="flip-card-front" style="background-image: url('imagenes/1e0800ec-ea89-4ff3-bfa7-7cea3a2dbe19.jpg');">
+						<!-- Frente de la tarjeta con imagen de fondo -->
+					</div>
+					<div class="flip-card-back">
+						<!-- Reverso de la tarjeta -->
+						Sábado fue, y capricho el beso dado,
+						capricho de varón, audaz y fino,
+						mas fue dulce el capricho masculino
+						a este mi corazón, lobezno alado.
+						<!-- Texto poético -->
+					</div>
+				</div>
+			</div>
+			<!-- Fin de la segunda tarjeta flip-card -->
+</body>
+</html>
